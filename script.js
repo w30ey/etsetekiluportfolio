@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     navToggle.addEventListener('click', function() {
         navMenu.classList.toggle('active');
         navToggle.classList.toggle('active');
+        document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
     });
     
     // Close mobile menu when clicking a link
@@ -18,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', function() {
             navMenu.classList.remove('active');
             navToggle.classList.remove('active');
+            document.body.style.overflow = '';
         });
     });
     
@@ -25,11 +27,11 @@ document.addEventListener('DOMContentLoaded', function() {
     function handleScroll() {
         // Add shadow to nav when scrolling
         if (window.scrollY > 50) {
-            nav.style.boxShadow = '0 5px 20px rgba(2, 12, 27, 0.3)';
-            nav.style.padding = '0.5rem 0';
+            nav.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.08)';
+            nav.style.padding = '0.75rem 0';
         } else {
             nav.style.boxShadow = 'none';
-            nav.style.padding = '1rem 0';
+            nav.style.padding = '1.25rem 0';
         }
         
         // Active section highlighting
@@ -38,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
             
-            if (scrollY >= (sectionTop - 200)) {
+            if (scrollY >= (sectionTop - 150)) {
                 current = section.getAttribute('id');
             }
         });
@@ -71,15 +73,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
             
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
+                e.preventDefault();
                 window.scrollTo({
-                    top: targetElement.offsetTop - 80,
+                    top: targetElement.offsetTop - 100,
                     behavior: 'smooth'
                 });
             }
@@ -99,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 bar.style.width = '0';
                 
                 setTimeout(() => {
-                    bar.style.transition = 'width 1.5s ease';
+                    bar.style.transition = 'width 1.5s cubic-bezier(0.4, 0, 0.2, 1)';
                     bar.style.width = width;
                 }, 200);
             }
@@ -135,22 +136,80 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.hero').classList.add('revealed');
     
     // Update copyright year
-    const yearSpan = document.querySelector('#current-year');
-    if (yearSpan) {
-        yearSpan.textContent = new Date().getFullYear();
+    const currentYear = new Date().getFullYear();
+    const yearElement = document.getElementById('current-year');
+    if (yearElement) {
+        yearElement.textContent = currentYear;
     }
     
-    // Handle form submission (if form existed)
-    const contactForm = document.querySelector('.contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+    // Newsletter form submission
+    const newsletterForm = document.querySelector('.footer-newsletter-form');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            // In a real implementation, this would send data to a server
-            alert('Thank you for your message. In a real implementation, this would be sent to a server.');
-            contactForm.reset();
+            const emailInput = this.querySelector('.footer-newsletter-input');
+            const button = this.querySelector('.footer-newsletter-button');
+            
+            if (emailInput.value) {
+                // In a real implementation, this would send data to a server
+                const originalHTML = button.innerHTML;
+                button.innerHTML = '<i class="fas fa-check"></i>';
+                button.style.backgroundColor = '#10B981';
+                
+                setTimeout(() => {
+                    button.innerHTML = originalHTML;
+                    button.style.backgroundColor = '';
+                    emailInput.value = '';
+                    alert('Thank you for subscribing! You\'ll receive updates on leadership and global strategy.');
+                }, 1500);
+            }
         });
     }
     
+    // Add hover effect to education items
+    const educationItems = document.querySelectorAll('.education-item-content');
+    educationItems.forEach(item => {
+        item.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateX(10px)';
+        });
+        
+        item.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateX(0)';
+        });
+    });
+    
+    // Picture placeholders - instructions for client
+    console.log('%c📸 PICTURE PLACEMENT INSTRUCTIONS:', 'color: #DC2626; font-size: 16px; font-weight: bold;');
+    console.log('%cReplace placeholder divs with <img> tags and add actual image URLs:', 'color: #4A5568;');
+    console.log('%c1. Hero: hero-picture-placeholder → <img src="your-portrait.jpg" alt="ETSE">', 'color: #718096;');
+    console.log('%c2. About: about-picture-placeholder → <img src="professional-headshot.jpg" alt="ETSE Professional">', 'color: #718096;');
+    console.log('%c3. Education: education-image-placeholder → <img src="university-photo.jpg" alt="Ashoka University">', 'color: #718096;');
+    console.log('%c4. Experience: experience-image-placeholder → <img src="company-logo.jpg" alt="Company">', 'color: #718096;');
+    console.log('%c5. Leadership: leadership-image-placeholder → <img src="action-shot.jpg" alt="Leadership Activity">', 'color: #718096;');
+    console.log('%c6. Contact: contact-picture-placeholder → <img src="casual-portrait.jpg" alt="ETSE Casual">', 'color: #718096;');
+    
     // Initialize the page with scroll position
     handleScroll();
+    
+    // Add loading animation for pictures
+    window.addEventListener('load', function() {
+        document.body.classList.add('loaded');
+        
+        // Animate hero picture
+        const heroPicture = document.querySelector('.hero-profile-picture');
+        if (heroPicture) {
+            setTimeout(() => {
+                heroPicture.style.opacity = '1';
+                heroPicture.style.transform = 'translateY(0)';
+            }, 500);
+        }
+    });
+    
+    // Pre-load animation for hero picture
+    const heroPicture = document.querySelector('.hero-profile-picture');
+    if (heroPicture) {
+        heroPicture.style.opacity = '0';
+        heroPicture.style.transform = 'translateY(30px)';
+        heroPicture.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+    }
 });

@@ -6,7 +6,7 @@
     <title>ETSE | Executive Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -14,7 +14,7 @@
     <!-- Navigation -->
     <nav class="nav">
         <div class="nav-container">
-            <a href="#" class="nav-logo">ETSE</a>
+            <a href="#" class="nav-logo">ETSE<span class="nav-logo-dot">.</span></a>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link active">Home</a></li>
                 <li><a href="#about" class="nav-link">Profile</a></li>
@@ -36,6 +36,9 @@
     <section id="home" class="hero">
         <div class="hero-container">
             <div class="hero-content">
+                <div class="hero-badge">
+                    <span>Global Professional</span>
+                </div>
                 <h1 class="hero-title">HELLO, I'M <span class="hero-title-accent">ETSE</span></h1>
                 <h2 class="hero-subtitle">Student · Researcher · Social Media Strategist · Project Manager</h2>
                 <p class="hero-description">
@@ -45,19 +48,42 @@
                     <a href="#experience" class="btn btn-primary">Explore My Work</a>
                     <a href="https://linkedin.com" target="_blank" class="btn btn-secondary">
                         <i class="fab fa-linkedin"></i>
-                        <span>LinkedIn</span>
+                        <span>Connect on LinkedIn</span>
                     </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">4+</span>
+                        <span class="hero-stat-label">Years Experience</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">15+</span>
+                        <span class="hero-stat-label">Projects</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">3</span>
+                        <span class="hero-stat-label">Continents</span>
+                    </div>
                 </div>
             </div>
             <div class="hero-visual">
-                <div class="hero-visual-element"></div>
-                <div class="hero-visual-element"></div>
-                <div class="hero-visual-element"></div>
+                <div class="hero-profile-picture">
+                    <div class="hero-picture-placeholder">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Professional Portrait</span>
+                    </div>
+                    <div class="hero-picture-frame"></div>
+                    <div class="hero-picture-badge">
+                        <i class="fas fa-award"></i>
+                    </div>
+                </div>
             </div>
         </div>
         <a href="#about" class="hero-scroll">
             <span>Scroll to explore</span>
-            <div class="hero-scroll-line"></div>
+            <div class="hero-scroll-icon">
+                <i class="fas fa-chevron-down"></i>
+            </div>
         </a>
     </section>
 
@@ -70,6 +96,15 @@
             </div>
             <div class="about-content">
                 <div class="about-text">
+                    <div class="about-picture">
+                        <div class="about-picture-placeholder">
+                            <i class="fas fa-user-tie"></i>
+                            <span>Professional Headshot</span>
+                        </div>
+                        <div class="about-picture-caption">
+                            <span>Global Strategy Conference, 2023</span>
+                        </div>
+                    </div>
                     <p class="about-paragraph">
                         I am a strategic thinker with a passion for creating impact at the intersection of education, technology, and social innovation. My journey spans continents—from the dynamic landscapes of South Africa to the academic rigor of India—equipping me with a uniquely global perspective.
                     </p>
@@ -78,26 +113,43 @@
                     </p>
                     <div class="about-highlights">
                         <div class="about-highlight">
-                            <i class="fas fa-globe-americas"></i>
-                            <div>
+                            <div class="about-highlight-icon">
+                                <i class="fas fa-globe-americas"></i>
+                            </div>
+                            <div class="about-highlight-content">
                                 <h3>Global Experience</h3>
                                 <p>Lived, studied, and worked across three continents</p>
                             </div>
                         </div>
                         <div class="about-highlight">
-                            <i class="fas fa-comments"></i>
-                            <div>
+                            <div class="about-highlight-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <div class="about-highlight-content">
                                 <h3>Languages</h3>
                                 <p>Fluent in English, French, and multiple African dialects</p>
+                            </div>
+                        </div>
+                        <div class="about-highlight">
+                            <div class="about-highlight-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <div class="about-highlight-content">
+                                <h3>Strategic Focus</h3>
+                                <p>Data-driven decision making and impact measurement</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="about-visual">
                     <div class="about-visual-card">
-                        <div class="about-visual-content">
-                            <h3>Leadership Ethos</h3>
-                            <p>"True leadership creates ecosystems where others can excel."</p>
+                        <div class="about-visual-quote">
+                            <i class="fas fa-quote-left"></i>
+                            <p>True leadership creates ecosystems where others can excel</p>
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                        <div class="about-visual-signature">
+                            <span>— Leadership Ethos</span>
                         </div>
                     </div>
                 </div>
@@ -114,36 +166,52 @@
             </div>
             <div class="education-timeline">
                 <div class="education-item">
-                    <div class="education-item-header">
-                        <h3 class="education-item-title">Ashoka University</h3>
-                        <span class="education-item-location">Sonipat, India</span>
+                    <div class="education-item-image">
+                        <div class="education-image-placeholder">
+                            <i class="fas fa-university"></i>
+                        </div>
                     </div>
+                    <div class="education-item-year">2020 - Present</div>
                     <div class="education-item-content">
-                        <p class="education-item-degree">Bachelor's Degree | Political Science & International Relations</p>
-                        <p class="education-item-period">2020 - Present</p>
-                        <ul class="education-item-highlights">
-                            <li>Dean's List for Academic Excellence</li>
-                            <li>International Student Ambassador</li>
-                            <li>Research focus on global governance systems</li>
-                        </ul>
+                        <div class="education-item-header">
+                            <h3 class="education-item-title">Ashoka University</h3>
+                            <span class="education-item-location">Sonipat, India</span>
+                        </div>
+                        <div class="education-item-body">
+                            <p class="education-item-degree">Bachelor's Degree | Political Science & International Relations</p>
+                            <ul class="education-item-highlights">
+                                <li>Dean's List for Academic Excellence</li>
+                                <li>International Student Ambassador</li>
+                                <li>Research focus on global governance systems</li>
+                                <li>Published research on digital diplomacy</li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="education-item-badge">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
                 </div>
                 <div class="education-item">
-                    <div class="education-item-header">
-                        <h3 class="education-item-title">African Leadership Academy</h3>
-                        <span class="education-item-location">Johannesburg, South Africa</span>
+                    <div class="education-item-image">
+                        <div class="education-image-placeholder">
+                            <i class="fas fa-school"></i>
+                        </div>
                     </div>
+                    <div class="education-item-year">2018 - 2020</div>
                     <div class="education-item-content">
-                        <p class="education-item-degree">Diploma | Leadership & Entrepreneurship</p>
-                        <p class="education-item-period">2018 - 2020</p>
-                        <ul class="education-item-highlights">
-                            <li>Selected among top 1% of African youth leaders</li>
-                            <li>Founded social impact venture addressing educational access</li>
-                            <li>Curriculum focused on ethical leadership and Pan-African development</li>
-                        </ul>
+                        <div class="education-item-header">
+                            <h3 class="education-item-title">African Leadership Academy</h3>
+                            <span class="education-item-location">Johannesburg, South Africa</span>
+                        </div>
+                        <div class="education-item-body">
+                            <p class="education-item-degree">Diploma | Leadership & Entrepreneurship</p>
+                            <ul class="education-item-highlights">
+                                <li>Selected among top 1% of African youth leaders</li>
+                                <li>Founded social impact venture addressing educational access</li>
+                                <li>Curriculum focused on ethical leadership and Pan-African development</li>
+                                <li>Led cross-cultural exchange programs</li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="education-item-badge">
                         <i class="fas fa-seedling"></i>
@@ -162,10 +230,12 @@
             </div>
             <div class="skills-container">
                 <div class="skills-category">
-                    <h3 class="skills-category-title">
-                        <i class="fas fa-code"></i>
-                        Technical Skills
-                    </h3>
+                    <div class="skills-category-header">
+                        <div class="skills-category-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="skills-category-title">Technical Skills</h3>
+                    </div>
                     <div class="skills-list">
                         <div class="skill">
                             <div class="skill-info">
@@ -206,10 +276,12 @@
                     </div>
                 </div>
                 <div class="skills-category">
-                    <h3 class="skills-category-title">
-                        <i class="fas fa-chart-line"></i>
-                        Marketing & Strategy
-                    </h3>
+                    <div class="skills-category-header">
+                        <div class="skills-category-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="skills-category-title">Marketing & Strategy</h3>
+                    </div>
                     <div class="skills-list">
                         <div class="skill">
                             <div class="skill-info">
@@ -263,8 +335,15 @@
             <div class="experience-container">
                 <div class="experience-card">
                     <div class="experience-card-header">
-                        <h3 class="experience-card-title">Executive Assistant</h3>
-                        <span class="experience-card-company">Mahalo Recovery</span>
+                        <div class="experience-card-image">
+                            <div class="experience-image-placeholder">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                        </div>
+                        <div class="experience-card-header-main">
+                            <h3 class="experience-card-title">Executive Assistant</h3>
+                            <span class="experience-card-company">Mahalo Recovery</span>
+                        </div>
                         <span class="experience-card-period">2022 - Present</span>
                         <button class="experience-card-toggle">
                             <i class="fas fa-chevron-down"></i>
@@ -275,13 +354,21 @@
                             <li>Streamlined executive operations, improving efficiency by 40% through implementation of new workflow systems</li>
                             <li>Managed cross-departmental communication for key initiatives affecting 200+ employees</li>
                             <li>Prepared analytical reports for board meetings, influencing strategic decisions on resource allocation</li>
+                            <li>Coordinated international partnerships across 3 continents</li>
                         </ul>
                     </div>
                 </div>
                 <div class="experience-card">
                     <div class="experience-card-header">
-                        <h3 class="experience-card-title">Executive Assistant</h3>
-                        <span class="experience-card-company">Wilkinson Law / Simple Texting</span>
+                        <div class="experience-card-image">
+                            <div class="experience-image-placeholder">
+                                <i class="fas fa-balance-scale"></i>
+                            </div>
+                        </div>
+                        <div class="experience-card-header-main">
+                            <h3 class="experience-card-title">Executive Assistant</h3>
+                            <span class="experience-card-company">Wilkinson Law / Simple Texting</span>
+                        </div>
                         <span class="experience-card-period">2021 - 2022</span>
                         <button class="experience-card-toggle">
                             <i class="fas fa-chevron-down"></i>
@@ -292,13 +379,21 @@
                             <li>Coordinated complex schedules for C-level executives across two organizations simultaneously</li>
                             <li>Developed client onboarding system that reduced setup time by 30%</li>
                             <li>Managed confidential legal documents and communications with precision</li>
+                            <li>Implemented CRM system that improved client retention by 15%</li>
                         </ul>
                     </div>
                 </div>
                 <div class="experience-card">
                     <div class="experience-card-header">
-                        <h3 class="experience-card-title">Co-Founder & CFO</h3>
-                        <span class="experience-card-company">Currisex</span>
+                        <div class="experience-card-image">
+                            <div class="experience-image-placeholder">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                        </div>
+                        <div class="experience-card-header-main">
+                            <h3 class="experience-card-title">Co-Founder & CFO</h3>
+                            <span class="experience-card-company">Currisex</span>
+                        </div>
                         <span class="experience-card-period">2020 - 2021</span>
                         <button class="experience-card-toggle">
                             <i class="fas fa-chevron-down"></i>
@@ -309,13 +404,21 @@
                             <li>Co-founded an educational technology startup focused on financial literacy for African youth</li>
                             <li>Managed all financial operations, budgeting, and investor relations</li>
                             <li>Secured $50,000 in seed funding and established partnerships with 3 educational institutions</li>
+                            <li>Built a team of 5 and developed curriculum for 500+ students</li>
                         </ul>
                     </div>
                 </div>
                 <div class="experience-card">
                     <div class="experience-card-header">
-                        <h3 class="experience-card-title">Chairperson</h3>
-                        <span class="experience-card-company">Ashoka University International Students</span>
+                        <div class="experience-card-image">
+                            <div class="experience-image-placeholder">
+                                <i class="fas fa-users"></i>
+                            </div>
+                        </div>
+                        <div class="experience-card-header-main">
+                            <h3 class="experience-card-title">Chairperson</h3>
+                            <span class="experience-card-company">Ashoka University International Students</span>
+                        </div>
                         <span class="experience-card-period">2020 - 2022</span>
                         <button class="experience-card-toggle">
                             <i class="fas fa-chevron-down"></i>
@@ -326,6 +429,7 @@
                             <li>Led a council representing 300+ international students from 40+ countries</li>
                             <li>Advocated for inclusive policies and cultural integration programs</li>
                             <li>Organized the university's first Global Cultural Festival with 500+ attendees</li>
+                            <li>Increased international student satisfaction by 25% through improved support systems</li>
                         </ul>
                     </div>
                 </div>
@@ -342,32 +446,76 @@
             </div>
             <div class="leadership-highlights">
                 <div class="leadership-card">
-                    <div class="leadership-card-icon">
-                        <i class="fas fa-handshake"></i>
+                    <div class="leadership-card-image">
+                        <div class="leadership-image-placeholder">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
                     </div>
-                    <h3 class="leadership-card-title">Community Building</h3>
-                    <p class="leadership-card-description">Founded and managed three student organizations focused on social entrepreneurship and cross-cultural dialogue.</p>
+                    <div class="leadership-card-inner">
+                        <div class="leadership-card-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 class="leadership-card-title">Community Building</h3>
+                        <p class="leadership-card-description">Founded and managed three student organizations focused on social entrepreneurship and cross-cultural dialogue.</p>
+                        <div class="leadership-card-stats">
+                            <span>3 Organizations</span>
+                            <span>200+ Members</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="leadership-card">
-                    <div class="leadership-card-icon">
-                        <i class="fas fa-bullhorn"></i>
+                    <div class="leadership-card-image">
+                        <div class="leadership-image-placeholder">
+                            <i class="fas fa-microphone"></i>
+                        </div>
                     </div>
-                    <h3 class="leadership-card-title">Public Speaking</h3>
-                    <p class="leadership-card-description">Invited speaker at 10+ conferences on topics including youth leadership, African innovation, and global education.</p>
+                    <div class="leadership-card-inner">
+                        <div class="leadership-card-icon">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <h3 class="leadership-card-title">Public Speaking</h3>
+                        <p class="leadership-card-description">Invited speaker at 10+ conferences on topics including youth leadership, African innovation, and global education.</p>
+                        <div class="leadership-card-stats">
+                            <span>10+ Conferences</span>
+                            <span>5 Countries</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="leadership-card">
-                    <div class="leadership-card-icon">
-                        <i class="fas fa-futbol"></i>
+                    <div class="leadership-card-image">
+                        <div class="leadership-image-placeholder">
+                            <i class="fas fa-running"></i>
+                        </div>
                     </div>
-                    <h3 class="leadership-card-title">Athletics</h3>
-                    <p class="leadership-card-description">Competitive tennis player; captain of university team that reached regional finals two consecutive years.</p>
+                    <div class="leadership-card-inner">
+                        <div class="leadership-card-icon">
+                            <i class="fas fa-futbol"></i>
+                        </div>
+                        <h3 class="leadership-card-title">Athletics</h3>
+                        <p class="leadership-card-description">Competitive tennis player; captain of university team that reached regional finals two consecutive years.</p>
+                        <div class="leadership-card-stats">
+                            <span>Team Captain</span>
+                            <span>2 Finals</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="leadership-card">
-                    <div class="leadership-card-icon">
-                        <i class="fas fa-hands-helping"></i>
+                    <div class="leadership-card-image">
+                        <div class="leadership-image-placeholder">
+                            <i class="fas fa-heart"></i>
+                        </div>
                     </div>
-                    <h3 class="leadership-card-title">Social Impact</h3>
-                    <p class="leadership-card-description">Volunteered 500+ hours with NGOs focusing on educational access for underprivileged communities.</p>
+                    <div class="leadership-card-inner">
+                        <div class="leadership-card-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h3 class="leadership-card-title">Social Impact</h3>
+                        <p class="leadership-card-description">Volunteered 500+ hours with NGOs focusing on educational access for underprivileged communities.</p>
+                        <div class="leadership-card-stats">
+                            <span>500+ Hours</span>
+                            <span>4 NGOs</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -385,24 +533,46 @@
                     </p>
                     <div class="contact-info">
                         <a href="mailto:hello@etse.com" class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>hello@etse.com</span>
+                            <div class="contact-item-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-item-content">
+                                <span class="contact-item-label">Email</span>
+                                <span class="contact-item-value">hello@etse.com</span>
+                            </div>
                         </a>
                         <a href="https://linkedin.com/in/etse" target="_blank" class="contact-item">
-                            <i class="fab fa-linkedin"></i>
-                            <span>LinkedIn Profile</span>
+                            <div class="contact-item-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="contact-item-content">
+                                <span class="contact-item-label">LinkedIn</span>
+                                <span class="contact-item-value">Connect with me</span>
+                            </div>
                         </a>
                         <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Based in Sonipat, India | Global Reach</span>
+                            <div class="contact-item-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-item-content">
+                                <span class="contact-item-label">Location</span>
+                                <span class="contact-item-value">Sonipat, India | Global Reach</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="contact-statement">
-                    <p class="contact-statement-text">
-                        "The most powerful leadership is that which creates ecosystems where others can discover and maximize their own potential."
-                    </p>
-                    <p class="contact-signature">— ETSE</p>
+                <div class="contact-visual">
+                    <div class="contact-profile-picture">
+                        <div class="contact-picture-placeholder">
+                            <i class="fas fa-smile"></i>
+                        </div>
+                    </div>
+                    <div class="contact-statement">
+                        <p class="contact-statement-text">
+                            "The most powerful leadership is that which creates ecosystems where others can discover and maximize their own potential."
+                        </p>
+                        <p class="contact-signature">— ETSE</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -413,26 +583,37 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <span class="footer-logo">ETSE</span>
+                    <span class="footer-logo">ETSE<span class="footer-logo-dot">.</span></span>
                     <p class="footer-tagline">Strategic Thinker · Global Citizen · Impact Architect</p>
                 </div>
                 <div class="footer-links">
-                    <a href="#home" class="footer-link">Home</a>
-                    <a href="#about" class="footer-link">Profile</a>
-                    <a href="#experience" class="footer-link">Experience</a>
-                    <a href="#contact" class="footer-link">Contact</a>
+                    <div class="footer-links-group">
+                        <h4 class="footer-links-title">Navigation</h4>
+                        <a href="#home" class="footer-link">Home</a>
+                        <a href="#about" class="footer-link">Profile</a>
+                        <a href="#experience" class="footer-link">Experience</a>
+                        <a href="#contact" class="footer-link">Contact</a>
+                    </div>
+                    <div class="footer-links-group">
+                        <h4 class="footer-links-title">Connect</h4>
+                        <a href="https://linkedin.com" target="_blank" class="footer-link">LinkedIn</a>
+                        <a href="mailto:hello@etse.com" class="footer-link">Email</a>
+                        <a href="#contact" class="footer-link">Schedule Call</a>
+                    </div>
                 </div>
-                <div class="footer-social">
-                    <a href="https://linkedin.com" target="_blank" class="footer-social-link">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="mailto:hello@etse.com" class="footer-social-link">
-                        <i class="fas fa-envelope"></i>
-                    </a>
+                <div class="footer-newsletter">
+                    <h4 class="footer-newsletter-title">Stay Updated</h4>
+                    <p class="footer-newsletter-text">Receive insights on leadership and global strategy</p>
+                    <form class="footer-newsletter-form">
+                        <input type="email" placeholder="Your email address" class="footer-newsletter-input">
+                        <button type="submit" class="footer-newsletter-button">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
                 </div>
             </div>
             <div class="footer-copyright">
-                <p>© 2023 ETSE. All rights reserved. Designed and built with precision.</p>
+                <p>© <span id="current-year">2023</span> ETSE. All rights reserved. Designed and built with precision.</p>
             </div>
         </div>
     </footer>
